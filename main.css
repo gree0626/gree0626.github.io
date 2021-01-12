@@ -51,10 +51,13 @@ table {
 
 
 /* END OF CSS RESET */
+html{
+  background-color: rgb(255, 22, 100);
+}
 
 .background{
   padding: 1em;
-  background-color: rgb(255, 22, 100);
+
 }
 
 h1{
@@ -83,7 +86,6 @@ p{
   font-family: 'Roboto', sans-serif;
   font-size: 1.75em;
   color: white;
-  clear: both;
   padding-top: 1em;
   line-height: 1.3em;
 }
