@@ -1,0 +1,178 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ==================== END OF CSS RESET ============================= */
+
+/* Main Adjustments */
+body{
+  margin-top: 0.25em;
+  margin-left: 2em;
+  margin-right: 2em;
+  background-color: #f7f7ff;
+  font-family: 'Montserrat', sans-serif;
+  color: #333131;
+}
+
+/* Logo Size and Spacing */
+.logo{
+  height: 8.5em;
+  width: auto;
+  padding-bottom: 1.25em;
+}
+
+/* Main Heading */
+h1{
+  padding-right: 1em;
+  line-height: 1.2em;
+  font-size: 4.5em;
+  font-weight: 700;
+}
+
+/* Main subtext */
+p{
+  padding-top: 0.25em;
+  padding-bottom: 0.5em;
+  line-height: 1.2em;
+  font-size: 1.8em;
+}
+
+/* Banner Sizing */
+.scooter-banner{
+  height: 15em;
+  width: auto;
+  padding-bottom: 1em;
+}
+
+
+
+
+
+
+
+/* Form Adjustments */
+
+/* Container */
+.form-container{
+  border-radius: 2em;
+  background-color: white;
+}
+
+/* Text Adjustments */
+.form-container h2{
+  padding-top: 0.5em;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.form-container h3{
+  padding-top: 1em;
+  font-size: 1.2em;
+}
+
+
+/* Form Content Spacing */
+form{
+  margin: 2em;
+}
+
+/* Use all of container width for input excluding margin */
+input{
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Input field adjustments */
+input[type=text]{
+  margin-top: 1em;
+  padding: 0.6em;
+
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.15em;
+
+
+  border-radius: 0.75em;
+  border: 1px solid #f7f7ff;
+  background-color: #f7f7ff;
+  color: #a5a5ac;
+}
+
+/* Space between checkbox and above field */
+input[type=text]:nth-child(6){
+  margin-bottom: 1em;
+}
+
+/* Checkbox Position and Size */
+input[type=checkbox]{
+  vertical-align: middle;
+  width: 2em;
+  height: 2em;
+}
+
+label{
+  font-size: 1.2em;
+}
+
+/* Submit Button */
+input[type=submit]{
+margin-top: 0.5em;
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+font-size: 1.8em;
+background-color: #57eeab;
+border: none;
+border-radius: 0.5em;
+padding: 0.5em;
+color: #333131;
+}
+
+input[type=submit]:hover{
+background-color: #47c98e;
+}
