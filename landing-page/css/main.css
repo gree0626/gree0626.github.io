@@ -377,10 +377,42 @@ width: auto;
 
 /* ================================ END OF TABLET STYLES ========================= */
 
+/* ================================ START OF DESKTOP STYLES ========================= */
+
 
 @media only screen and (min-width: 1024px) {
 
-  footer{
-    background-color: red;
-  }
+.content{
+  background-image: url(../images/bg-image/scooter.svg);
+  background-repeat: no-repeat;
+  background-size: 58em;
+  background-position: bottom;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.8fr 2fr;
+  gap: 0px;
+  grid-template-areas: 
+  'logo logo logo'
+  'heading empty form';
+}
+
+.logo{
+  grid-area: logo;
+}
+
+.heading{
+grid-area: heading;
+}
+
+.scooter-banner{
+display: none;
+}
+
+.form-container{
+  grid-area: form;
+}
+
+footer{
+  margin-top: 7em;
+}
 }
