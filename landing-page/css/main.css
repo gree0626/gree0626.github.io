@@ -49,15 +49,41 @@ table {
 
 /* ==================== END OF CSS RESET ============================= */
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== CUSTOM CSS START ============================= */
 /* Main Adjustments */
 body{
-  margin-top: 0.25em;
-  margin-left: 2em;
-  margin-right: 2em;
   background-color: #f7f7ff;
   font-family: 'Montserrat', sans-serif;
   color: #333131;
 }
+
+p{
+  padding-top: 0.25em;
+  padding-bottom: 0.5em;
+  line-height: 1.2em;
+  font-size: 1.8em;
+}
+
+
+/* Adjustments Excluding Footer */
+.content{
+  margin-top: 0.25em;
+  margin-left: 2em;
+  margin-right: 2em; 
+}
+
 
 /* Logo Size and Spacing */
 .logo{
@@ -75,18 +101,20 @@ h1{
 }
 
 /* Main subtext */
-p{
+h2{
   padding-top: 0.25em;
   padding-bottom: 0.5em;
   line-height: 1.2em;
   font-size: 1.8em;
 }
 
-/* Banner Sizing */
+/* Scooter Banner Image Sizing and Center */
 .scooter-banner{
-  height: 15em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 16em;
   width: auto;
-  padding-bottom: 1em;
 }
 
 
@@ -95,15 +123,16 @@ p{
 
 
 
-/* Form Adjustments */
+/* ============== Apply Form Adjustments ================= */
 
-/* Container */
+/* Form Container and Drop Shadow */
 .form-container{
   border-radius: 2em;
   background-color: white;
+  box-shadow: 5px 5px 15px 5px #b9b9c4;
 }
 
-/* Text Adjustments */
+/* Form Text Adjustments */
 .form-container h2{
   padding-top: 0.5em;
   font-size: 3em;
@@ -115,53 +144,63 @@ p{
   font-size: 1.2em;
 }
 
-
-/* Form Content Spacing */
-form{
-  margin: 2em;
+.form-container form p{
+  padding-top: 1em;
+  font-size: 1em;
 }
 
+.form-container form a{
+  text-decoration: none;
+  color: #ff8480;
+}
+
+.form-container label{
+  font-size: 1.2em;
+}
+
+
+/* Form Container Content Spacing */
+.form-container form{
+  margin: 2em;
+  padding-bottom: 1.5em;
+}
+
+
+/* ============== Form Input Adjustments ================= */
+
 /* Use all of container width for input excluding margin */
-input{
+.form-container input{
   box-sizing: border-box;
   width: 100%;
 }
 
 /* Input field adjustments */
-input[type=text]{
+.form-container input[type=text]{
   margin-top: 1em;
   padding: 0.6em;
-
-
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 1.15em;
-
-
   border-radius: 0.75em;
   border: 1px solid #f7f7ff;
   background-color: #f7f7ff;
   color: #a5a5ac;
 }
 
-/* Space between checkbox and above field */
-input[type=text]:nth-child(6){
+/* Checkbox Above Spacing Adjustment */
+.form-container input[type=text]:nth-child(6){
   margin-bottom: 1em;
 }
 
 /* Checkbox Position and Size */
-input[type=checkbox]{
+.form-container input[type=checkbox]{
   vertical-align: middle;
   width: 2em;
   height: 2em;
 }
 
-label{
-  font-size: 1.2em;
-}
-
-/* Submit Button */
-input[type=submit]{
+/* ============== Submit Button Adjustments ================= */
+.form-container input[type=submit]{
 margin-top: 0.5em;
 font-family: 'Montserrat', sans-serif;
 font-weight: 700;
@@ -169,10 +208,156 @@ font-size: 1.8em;
 background-color: #57eeab;
 border: none;
 border-radius: 0.5em;
-padding: 0.5em;
+padding: 0.6em;
 color: #333131;
 }
 
-input[type=submit]:hover{
+/* Button Hover Effect */
+.form-container input[type=submit]:hover{
 background-color: #47c98e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================= Footer Adjustments ====================== */
+
+/* General Adjustments */
+footer{
+  background-color: #fffd8c;
+  padding: 2em;
+}
+
+/* Text Adjustments */
+footer h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  padding-right: 5em;
+}
+
+footer p{
+  padding-top: 0.5em;
+  font-size: 1.2em;
+}
+
+
+/* ========================= Footer Form Adjustments ====================== */
+
+
+/* Use all of container width for input excluding margin */
+footer input{
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+/* Text Box Adjustments */
+footer input[type=text]{
+  padding: 0.6em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.15em;
+  border-radius: 0.75em;
+  border: 1px solid #f7f7ff;
+  background-color: #f7f7ff;
+  color: #7f7f85;
+}
+
+#dhours{
+  float: left;
+  width: 27.5%;
+}
+
+#dcity{
+  float: right;
+  width: 70%;
+}
+
+/* Submit Button Formatting */
+footer input[type=submit]{
+  margin-top: 0.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8em;
+  background-color: #ff8480;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.25em;
+  color: #f7f7ff;
+}
+  
+  /* Submit Button Hover */
+footer input[type=submit]:hover{
+  background-color: #db706d;
+}
+
+/* ========================= Social Links ====================== */
+
+
+/* Social Media Icon Spacing */
+.social-icons{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 2em;
+}
+
+
+/* Social Media Icon Sizing */
+.social-icons img{
+height: 2.5em;
+width: auto;
+}
+
+
+
+
+/* ================================ END OF MOBILE STYLES ========================= */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .content{
+    margin-top: 0.25em;
+    margin-left: 4em;
+    margin-right: 4em; 
+  }
+
+  /* Main Heading */
+  h1{
+  padding-right: 2em;
+  }
+
+  form h2{
+    position: relative;
+  }
+  
+ h2{
+    position: absolute;
+  }
+
+  /* Scooter Banner Image Sizing and Center */
+  .scooter-banner{
+  padding-top: 3.5em;
+  height: 20em;
+  }
+
+  .form-container h3{
+    padding-top: 0em;
+  }
+
+  footer{
+    background-color: red;
+  }
+
 }
