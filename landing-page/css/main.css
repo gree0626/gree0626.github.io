@@ -199,6 +199,7 @@ h2{
   height: 2em;
 }
 
+
 /* ============== Submit Button Adjustments ================= */
 .form-container input[type=submit]{
 margin-top: 0.5em;
@@ -216,15 +217,6 @@ color: #333131;
 .form-container input[type=submit]:hover{
 background-color: #47c98e;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -251,6 +243,8 @@ footer p{
 }
 
 
+
+
 /* ========================= Footer Form Adjustments ====================== */
 
 
@@ -260,32 +254,38 @@ footer input{
   width: 100%;
 }
 
+/* Input and Submit Grid */
+.input-grid{
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-areas: 
+  "hours city city city city"
+  "submit submit submit submit submit";
+}
 
-/* Text Box Adjustments */
+.input-grid #dhours{
+grid-area: hours;
+}
+
+.input-grid #dcity{
+  grid-area: city;
+}
+
+/* Input Text Box Adjustments */
 footer input[type=text]{
   padding: 0.6em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 1.15em;
+  font-size: 1em;
   border-radius: 0.75em;
   border: 1px solid #f7f7ff;
   background-color: #f7f7ff;
   color: #7f7f85;
 }
 
-#dhours{
-  float: left;
-  width: 27.5%;
-}
-
-#dcity{
-  float: right;
-  width: 70%;
-}
-
 /* Submit Button Formatting */
 footer input[type=submit]{
-  margin-top: 0.5em;
+  grid-area: submit;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.8em;
@@ -301,29 +301,37 @@ footer input[type=submit]:hover{
   background-color: #db706d;
 }
 
+
+
 /* ========================= Social Links ====================== */
 
 
 /* Social Media Icon Spacing */
 .social-icons{
   display: flex;
-  justify-content: space-between;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 2em;
+  justify-content: center;
 }
 
 
 /* Social Media Icon Sizing */
 .social-icons img{
+padding-top: 2em;
+padding-left: 2em;
+padding-right: 2em;
 height: 2.5em;
 width: auto;
 }
 
 
 
-
 /* ================================ END OF MOBILE STYLES ========================= */
+
+
+
+
+
+
+/* ================================ START OF TABLET STYLES ========================= */
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
@@ -349,15 +357,30 @@ width: auto;
   /* Scooter Banner Image Sizing and Center */
   .scooter-banner{
   padding-top: 3.5em;
-  height: 20em;
+  height: 23em;
   }
 
   .form-container h3{
     padding-top: 0em;
   }
 
+  .input-grid{
+    grid-gap: 1em;
+    grid-template-areas: 
+    "hours hours city city submit submit";
+  }
+
+  footer{
+    margin-top: 7.5em;
+  }
+}
+
+/* ================================ END OF TABLET STYLES ========================= */
+
+
+@media only screen and (min-width: 1024px) {
+
   footer{
     background-color: red;
   }
-
 }
