@@ -69,15 +69,6 @@ body{
   color: #333131;
 }
 
-/* Text Adjustments */
-p{
-  padding-top: 0.25em;
-  padding-bottom: 0.5em;
-  line-height: 1.2em;
-  font-size: 1.8em;
-}
-
-
 /* Main Content Adjustments Excluding Footer */
 .content{
   margin-top: 0.25em;
@@ -85,15 +76,15 @@ p{
   margin-right: 2em; 
 }
 
-
-/* Logo Size and Spacing */
-.logo{
-  height: 8.5em;
-  width: auto;
-  padding-bottom: 1.25em;
+/* == Text Adjustments == */
+p{
+  padding-top: 0.25em;
+  padding-bottom: 0.5em;
+  line-height: 1.2em;
+  font-size: 1.8em;
 }
 
-/* Main Heading */
+/* Main Heading Size and Spacing */
 h1{
   padding-right: 1em;
   line-height: 1.2em;
@@ -101,12 +92,21 @@ h1{
   font-weight: 700;
 }
 
-/* Main subtext */
+/* Main Subtext Size and Spacing */
 h2{
   padding-top: 0.25em;
   padding-bottom: 0.5em;
   line-height: 1.2em;
   font-size: 1.8em;
+}
+
+/* == Image Adjustments == */
+
+/* Logo Size and Spacing */
+.logo{
+  height: 8.5em;
+  width: auto;
+  padding-bottom: 1.25em;
 }
 
 /* Scooter Banner Image Sizing and Center */
@@ -121,12 +121,10 @@ h2{
 
 
 
+/* ============== Application Form Adjustments ================= */
 
 
-
-/* ============== Apply Form Adjustments ================= */
-
-/* Form Container and Drop Shadow */
+/* Form Container Size, Drop Shadow, and Color */
 .form-container{
   border-radius: 2em;
   background-color: white;
@@ -134,7 +132,15 @@ h2{
   margin-bottom: 3.8em;
 }
 
-/* Form Text Adjustments */
+/* Form Container Content Spacing */
+.form-container form{
+  margin: 2em;
+  padding-bottom: 1.5em;
+}
+
+/* == Form Container Text Adjustments == */
+
+/* Main Form Heading */
 .form-container h2{
   padding-top: 0.4em;
   padding-bottom: 0em;
@@ -142,46 +148,44 @@ h2{
   font-weight: 700;
 }
 
+/* Secondary Heading */
 .form-container h3{
   padding-top: 0.8em;
   font-size: 1.3em;
 }
 
+/* Hide Desktop Heading Div */
 .form-container .desktop-h3{
   display: none;
 }
 
+/* Checkbox Text Prompt */
+.form-container label{
+  font-size: 1.2em;
+}
+
+/* == Check Application Link == */
 .form-container form p{
   padding-top: 1em;
   font-size: 1.2em;
 }
 
+/* Link Color */
 .form-container form a{
   text-decoration: none;
   color: #ff8480;
 }
 
-.form-container label{
-  font-size: 1.2em;
-}
-
-
-/* Form Container Content Spacing */
-.form-container form{
-  margin: 2em;
-  padding-bottom: 1.5em;
-}
-
 
 /* ============== Form Input Adjustments ================= */
 
-/* Use all of container width for input excluding margin */
+/* Use all of container width for input fields excluding margin */
 .form-container input{
   box-sizing: border-box;
   width: 100%;
 }
 
-/* Input field adjustments */
+/* Input field general adjustments */
 .form-container input[type=text]{
   margin-top: 1em;
   padding: 0.8em;
@@ -194,7 +198,7 @@ h2{
   color: #a5a5ac;
 }
 
-/* Checkbox Above Spacing Adjustment */
+/* Checkbox Spacing Adjustment */
 .form-container input[type=text]:nth-child(7){
   margin-bottom: 1em;
 }
@@ -207,7 +211,7 @@ h2{
 }
 
 
-/* ============== Submit Button Adjustments ================= */
+/* =========== Form Submit Button Adjustments =========== */
 .form-container input[type=submit]{
 margin-top: 0.5em;
 font-family: 'Montserrat', sans-serif;
@@ -228,9 +232,10 @@ background-color: #47c98e;
 
 
 
+
 /* ========================= Footer Adjustments ====================== */
 
-/* General Adjustments */
+/* General Color and Padding Adjustments */
 footer{
   background-color: #fffd8c;
   padding: 2em;
@@ -256,30 +261,34 @@ footer p{
 
 /* ========================= Footer Form Adjustments ====================== */
 
-
-/* Use all of container width for input excluding margin */
-footer input{
-  box-sizing: border-box;
-  width: 100%;
-}
-
-/* Input and Submit Grid */
+/* Form Input Grid */
 .input-grid{
   display: grid;
   grid-gap: 0.5em;
+  grid-template-columns: 0.3fr 1fr;
   grid-template-areas: 
-  "hours city city city city"
-  "submit submit submit submit submit";
+  "hours city"
+  "submit submit";
 }
 
+/* Hours field and text overflow control */
 .input-grid #dhours{
 grid-area: hours;
 text-overflow: ellipsis;
 }
 
+/* City field and text overflow control */
 .input-grid #dcity{
   text-overflow: ellipsis;
   grid-area: city;
+}
+
+/* == Input Field Adjustments == */
+
+/* Use all of container width for input excluding margin */
+footer input{
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* Input Text Box Adjustments */
@@ -307,14 +316,14 @@ footer input[type=submit]{
   color: #f7f7ff;
 }
   
-  /* Submit Button Hover */
+/* Submit Button Hover Effect */
 footer input[type=submit]:hover{
   background-color: #db706d;
 }
 
 
 
-/* ========================= Social Links ====================== */
+/* ========================= Social Media Links ====================== */
 
 
 /* Social Media Icon Spacing */
@@ -342,50 +351,67 @@ width: auto;
 
 
 
+
+
+
 /* ================================ START OF TABLET STYLES ========================= */
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
 
+  /* == Main Content Adjust == */
+  /* Margin Adjustments Above Footer */
   .content{
     margin-top: 0.25em;
     margin-left: 4em;
     margin-right: 4em; 
   }
 
-  /* Main Heading */
+
+  /* == Image Adjustments == */
+  /* Scooter Banner Image Sizing and Center */
+  .scooter-banner{
+    padding-top: 3.5em;
+    height: 23em;
+  }
+
+
+  /* == Text Adjustments == */
+  /* Main Heading Padding */
   h1{
   padding-right: 2em;
   }
+  
+  /* Image Below Text Adjustment */
+  h2{
+    position: absolute;
+  }
 
+
+  /* == Form Text Adjustments == */
+  /* Form Heading Fix */
   form h2{
     position: relative;
   }
   
- h2{
-    position: absolute;
-  }
-
-  /* Scooter Banner Image Sizing and Center */
-  .scooter-banner{
-  padding-top: 3.5em;
-  height: 23em;
-  }
-
+  /* Size Adjustment for second prompt */
   .form-container h3{
     font-size: 2em;
     padding-top: 0.5em;
   }
 
+  /* Center Text After Button */
   .form-container form p {
     text-align: center;
     }
 
+    /* Form Grid Adjustments */
   .input-grid{
     grid-gap: 1em;
     grid-template-areas: 
     "hours hours city city submit submit";
   }
 
+  /* == Footer Spacing Adjustments == */
   footer{
     padding-left: 4em;
     padding-right: 4em; 
@@ -400,135 +426,159 @@ width: auto;
 
 
 
+
+
+
+
+
 /* ================================ START OF DESKTOP STYLES ========================= */
 
 
 @media only screen and (min-width: 1280px) {
 
-.content{
-  margin-left: 8em;
-  margin-right: 8em;
-  background-image: url(../images/bg-image/scooter.svg);
-  background-repeat: no-repeat;
-  background-size: 55em;
-  background-position: bottom;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1.1fr;
-  grid-template-rows: 0.6fr 2fr;
-  grid-template-areas: 
-  'logo logo logo'
-  'heading empty form';
-}
+  /* Excluding Footer | Margin Adjust, Background Image Replace, Content Grid */
+  .content{
+    margin-left: 8em;
+    margin-right: 8em;
+    background-image: url(../images/bg-image/scooter.svg);
+    background-repeat: no-repeat;
+    background-size: 55em;
+    background-position: bottom;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.1fr;
+    grid-template-rows: 0.6fr 2fr;
+    grid-template-areas: 
+    'logo logo logo'
+    'heading empty form';
+  }
 
-.logo{
-  grid-area: logo;
-  height: 7.5em;
-  padding-top: 0.5em;
-}
+  /* == Text Adjustments == */
+  .heading{
+    grid-area: heading;
+  }
 
-.heading{
-grid-area: heading;
-}
+  .heading h1{
+    font-size: 4.75em;
+    padding-right: 0em;
+  }
+
+  h2{
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    font-size: 1.55em;
+  }
+
+  /* == Image Adjustments == */
+  /* Image Removal For Replacement Above */
+  .scooter-banner{
+    display: none;
+  }
+
+  .logo{
+    grid-area: logo;
+    height: 7.5em;
+    padding-top: 0.5em;
+  }
 
 
-.heading h1{
-  font-size: 4.75em;
-  padding-right: 0em;
-}
+  /* == Application Form Adjustments */
+  .form-container{
+    grid-area: form;
+    margin-bottom: 0;
+  }
 
-h2{
-  padding-top: 1.5em;
-  padding-bottom: 1em;
-  font-size: 1.55em;
-}
+  .form-container h2{
+    padding-top: 0;
+    padding-bottom: 0.3em;
+    font-size: 2.75em;
+  }
 
-.scooter-banner{
-display: none;
-}
+  /* Hides original subheading */
+  .form-container h3{
+   display: none;
+  }
 
-.form-container{
-  grid-area: form;
-  margin-bottom: 0;
-}
-.form-container h2{
-  padding-top: 0;
-  padding-bottom: 0.3em;
-  font-size: 2.75em;
-}
+  /* Displays new subheading */
+  .form-container .desktop-h3{
+    display: unset;
+    font-size: 1.5em;
+  }
 
-.form-container h3{
-  display: none;
-}
+  .form-container form p {
+    font-size: 1em;
+    text-align: center;
+  }
 
-.form-container .desktop-h3{
-  display: unset;
-  font-size: 1.5em;
-}
+  .form-container form{
+    padding-bottom: 0;
+  }
 
-.form-container form p {
-font-size: 1em;
-text-align: center;
-}
+  .form-container input[type=submit] {
+    padding: 0.3em;
+    font-size: 2em;
+  }
 
-.form-container form{
-padding-bottom: 0;
-}
+  /* ======= Footer Adjustments ========== */
 
-.form-container input[type=submit] {
-padding: 0.3em;
-font-size: 2em;
-}
+  /* Footer Grid */
+  footer{
+    padding-bottom: 3em;
+    margin-top: 6em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr;
+    grid-template-areas: 
+    'h3   empty   media'
+    'p    empty   media'
+    'form empty   media';
+  }
 
-footer{
-  padding-bottom: 3em;
-  margin-top: 6em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.1fr 0.1fr 1fr;
-  grid-template-areas: 
-  'h3   empty   media'
-  'p    empty   media'
-  'form empty   media';
-}
+  /* Media Icon Grid Area */
+  .social-icons{
+    grid-area: media;
+  }
 
-.social-icons{
-  grid-area: media;
-}
+  /* Media Icon Size Adjustment */
+  .social-icons img {
+    height: 2em;
+  }
 
-.social-icons img {
-height: 2em;
-}
+  /* Form Grid Area */
+  footer form{
+    grid-area: form;
+  }
 
-footer form{
-  grid-area: form;
-}
+  /* Form Text Area and Sizing */
+  footer h3{
+    grid-area: h3;
+    padding: 0;
+  }
 
-footer p{
-  grid-area: p;
-  font-size: 1.2em;
-}
+  /* Form Second Text Area and Sizing */
+  footer p{
+    grid-area: p;
+    font-size: 1.2em;
+  }
 
-footer h3{
-  grid-area: h3;
-  padding: 0;
-}
+  /* Secondary Input Grid */
+  .input-grid{
+    grid-template-columns: 0.3fr 1fr;
+    grid-gap: 1em;
+    grid-template-areas: 
+   "hours city city submit submit";
+  }
 
-.input-grid{
-  grid-template-columns: 0.3fr 1fr;
-  grid-gap: 1em;
-  grid-template-areas: 
-  "hours city city submit submit";
-}
+  /* Submit Button Sizing and Spacing */
+  footer input[type=submit] {
+    font-size: 1.5em;
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    border-radius: 0.7em;
+  }
 
-footer input[type=submit] {
-font-size: 1.5em;
-padding-left: 1.4em;
-padding-right: 1.4em;
-border-radius: 0.7em;
-}
-
-footer input[type=text] {
-padding: 0.6em;
-}
+  /* Footer Input Padding */
+  footer input[type=text] {
+  padding: 0.6em;
+  }
 
 }
